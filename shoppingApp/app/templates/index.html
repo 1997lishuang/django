@@ -4,6 +4,15 @@
 	<title>首页</title>
 </head>
 <body>
-<h1>你好 helloword!</h1>
+
+
+{% for list in article %}
+    <div class="article-box clearfix excerpt-1">
+        <div class="col-md-4">
+           <p>{{list.title}}</p>
+           <p>{{list.created_time}}</p>
+        </div>
+    </div>
+{% endfor %}
 </body>
 </html>

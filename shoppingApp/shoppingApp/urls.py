@@ -22,7 +22,10 @@ from django.conf.urls import url, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('index/<str:pk>', views.index),
+    path('findBlogById/<int:pk>', views.findBlogById),
+    path('findBlogByAll/', views.findBlogByAll),
+    path('findBlogByCategory/', views.findBlogByCategory),
+    path('findBlogByLikeArticleTitleAndCreatedTimeAndCategory', views.findBlogByLikeArticleTitleAndCreatedTimeAndCategory),
     path('ueditor/', include('DjangoUeditor.urls')), #添加DjangoUeditor的URL
 ]
 
